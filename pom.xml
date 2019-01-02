@@ -10,6 +10,7 @@
         <module>personServerProvider</module>
         <module>personServerConsumer</module>
         <module>configServer</module>
+        <module>streamKafka</module>
     </modules>
 
 	<parent>
