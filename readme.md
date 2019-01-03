@@ -38,6 +38,14 @@ Alternatively, you can also use the Spring Cloud Stream Kafka Starter.
     compile('org.springframework.kafka:spring-kafka')自动包括在内
 ```
 
+#### kafka主要用途
+
+消息中间件
+流式计算处理
+日志
+
+
+
 ### spring kafka
 
 #### 设计模式
@@ -89,3 +97,81 @@ public KafkaTemplate<?, ?> kafkaTemplate(ProducerFactory<Object, Object> kafkaPr
     return kafkaTemplate;
 }
 ```
+###问题
+
+1、kafka使用场景？
+
+​	高性能的Stream处理
+
+2、kafka如何使用后如何删除？
+
+
+
+3、怎么没有看到Broker设置？
+
+​	Broker不需要设置，它是单独启动
+
+4、consumer为什么分组？
+
+​	consumer需要定义不同逻辑分组，（是不是几个可以同时消费一个主题，否则，重启一个只能重新消费）
+
+## Spring Cloud Stream (下)
+
+RabbitMQ： AMQP,JMS 规范
+
+Kafka：相对松散的消息队列协议
+
+企业整合模式 Integration
+
+### Spring Cloud Stream
+
+基本概念
+
+
+
+#### Source :   来源  近义词：Producer,Publisher
+
+#### Sink ： 接收器  近义词：Consumer,Subsciber
+
+#### Processor:     对于上流而言是Sink，对于下流而言是Source
+
+Reactive Streams:
+
+​	Publisher
+
+​	Subscriber
+
+​	Processor
+
+消息大致分为两个部分：
+
+消息头：（Headers)
+
+消息体：（Body/Payload）
+
+#### 定义标准的消息发送源头
+
+```
+
+```
+
+
+
+#### 问答
+
+@EnableBinding 有什么用
+
+答：@EnableBinding 将`Source`、`Sink`以及`Processor`提升成相应的代理类
+
+
+
+
+
+## Spring Cloud Sleuth
+
+整合：
+
+引入maven
+
+
+
